@@ -8,6 +8,12 @@ import plotly.graph_objects as go # type: ignore
 import re
 import time
 
+st.set_page_config(
+    page_title="stockForesight | TDS",
+    page_icon="🧊",
+    layout="centered",
+    initial_sidebar_state="expanded" 
+)
 def get_data(ticker):
     try:
         stock = yf.Ticker(ticker)
