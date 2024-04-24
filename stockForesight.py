@@ -12,7 +12,6 @@ st.set_page_config(
     page_title="stockForesight | TDS",
     page_icon="🧊",
     layout="centered",
-    initial_sidebar_state="expanded" 
 )
 def get_data(ticker):
     try:
@@ -227,7 +226,7 @@ if __name__ == "__main__":
                         st.write(f"Format: dd_mm_yyyy openingprice.")
                         st.write(f"Example: 24_04_2024 100.2")
 
-                    if prompt := st.chat_input():
+                    if prompt := st.chat_input("input variables"):
                         with st.chat_message("user"):
                             st.markdown(prompt)
 
