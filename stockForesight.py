@@ -188,6 +188,8 @@ if __name__ == "__main__":
         st.write("Groot:")
         st.write("An enhanced AI marvel by Team Vision. Expanding beyond GPT-3's limits, Groot leverages RAG to dynamically learn from external files, revolutionizing personalized learning experiences.")
         st.link_button("View Project", "https://github.com/thedevyashsaini/Groot")
+        st.markdown("#")
+        st.caption("Disclaimer: Our stock price prediction website provides forecasts based on historical data and statistical models, but please note that past performance is not indicative of future results. Users are advised to conduct their own research and consult with financial experts before making investment decisions.")
 
     with st.spinner("Loading..."):
         time.sleep(2)
@@ -200,7 +202,7 @@ if __name__ == "__main__":
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
-    if ticker := st.text_input(label="Stock Symbol"):
+    if ticker := st.text_input(label="", placeholder="Stock Symbol", label_visibility="collapsed"):
         st.session_state.ticker = ticker
         if get_data(ticker):
             with st.chat_message("assistant"):
